@@ -1,0 +1,436 @@
+<Module>
+<ModulePrefs title="Custom Gadget"/>
+<Content type="html">
+<![CDATA[
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Consul</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- 
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="Lato.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+ -->
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico">
+
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('parallax1.jpeg');
+        min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url("parallax2.jpeg");
+        min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+        background-image: url("parallax3.jpeg");
+        min-height: 400px;
+    }
+
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: scroll;
+            min-height: 400px;
+        }
+    }
+    
+    /* Container holding the image and the text */
+	.container {
+	  position: relative;
+	  text-align: center;
+	  color: white;
+	}
+
+	/* Bottom left text */
+	.bottom-left {
+	  position: absolute;
+	  bottom: 8px;
+	  left: 16px;
+	}
+
+	/* Top left text */
+	.top-left {
+	  position: absolute;
+	  top: 8px;
+	  left: 16px;
+	}
+
+	/* Top right text */
+	.top-right {
+	  position: absolute;
+	  top: 8px;
+	  right: 16px;
+	}
+
+	/* Bottom right text */
+	.bottom-right {
+	  position: absolute;
+	  bottom: 8px;
+	  right: 16px;
+	}
+
+	/* Centered text */
+	.centered {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+	
+</style>
+
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT THE CONSULATE</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ABOUT HUNGARY</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+<!-- 
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+ -->
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">CONSULATE</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">HUNGARY</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+<!-- 
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+ -->
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+<!-- 
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+ -->
+    <div class="bgimg-1 w3-display-container" id="home">
+        <div class="w3-display-middle" style="white-space:normal;">
+            <p class="w3-center w3-padding-large w3-text-white w3-xxlarge w3-wide w3-animate-opacity" style="text-shadow:0 0 3px #000000;">
+            <span class="w3-hide-small">HONORARY </span>CONSULATE OF HUNGARY<span class="w3-hide-small"> IN HAWAII</span><br>
+            <img src="cimer.png" style="width:100px; padding:10px"
+                    alt="Coat of arms of Hungary">
+            </p>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT THE CONSULATE</h3>
+        <p class="w3-center"><em>How can honorary consuls assist you?</em></p>
+        <p>The main duty of honorary consuls of Hungary is to provide guidance to Hungarian citizens in distress and offer assistance in case of emergency. Honorary consuls are called „honorary“ because they perform their work on a voluntary basis. They are not employed by the Hungarian government, have only limited consular authority and thus only limited official means to provide assistance. For example, while they are authorized to authenticate signatures and copies of documents, they are not able to accept passport or visa applications. Because they typically practice their consular office alongside a main profession, it is not reasonable to expect that they are always present or available by phone. The honorary consul will, if necessary, refer you further to the competent Hungarian foreign mission if he himself cannot assist.</p> 
+        <p> Visa applications are handled by the Embassy of Hungary in Washington D.C., where its <a href="https://washington.mfa.gov.hu/eng/page/visa-and-travel-information">visa section</a> provides complete information about visa options and requirements. Only the Consulates General and the Embassy are equipped to process passports, and the Embassy's <a href="https://washington.mfa.gov.hu/eng/page/passport">passport section</a> lists the respective locations and contact information.</p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>Peter Fuleky, PhD</b></p><br>
+                <img src="avatar.jpeg" class="w3-round w3-image w3-padding-small" alt="Photo of Me"
+                    width="250" height="250">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>Grew up in Slovakia as a member of the Hungarian minority. Studied civil engineering at the Czech Technical University in Prague. Worked as a management consultant across Europe. After moving to the US in 2000, earned an MBA and worked as a securities trader in Florida. Focused on quantitative economic analysis and received doctorate from the University of Washington. Moved to Hawaii in 2009. Holds a joint faculty appointment at the University of Hawaii Economic Research Organization (UHERO) and the Department of Economics at UH Manoa. Coauthor of UHERO's quarterly forecast reports on Hawaii's economy. Used to ski competitively, but due to the lack of snow in Hawaii, now dabbling in surfing.
+                </p>
+            </div>
+        </div>
+<!-- 
+        <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+        <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+        </div>
+ -->
+    </div>
+
+    <!-- Second Parallax Image with Portfolio Text -->
+<!-- 
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+ -->
+    <div class="bgimg-2 w3-display-container" id="portfolio">
+        <div class="w3-display-middle" style="white-space:normal;">
+            <p class="w3-center w3-xxlarge w3-text-white w3-wide" style="text-shadow:0 0 3px #000000;">ABOUT HUNGARY</p>
+        </div>
+    </div>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">9.7M</span><br>
+            Population
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">Budapest</span><br>
+            Capital
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">Forint</span><br>
+            Currency
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">+36</span><br>
+            Calling code
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+
+        <h3 class="w3-center">RESOURCES</h3>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="w3-row-padding w3-center">
+
+            <div class="w3-col m3">
+            	<div class="container w3-opacity w3-hover-opacity-off">
+                 <a href="https://visithungary.com"><img src="p1.jpeg" style="width:100%;" class="w3-round w3-image"
+                    alt="Visit Hungary">
+                 <span class="centered w3-large" style="text-shadow:0 0 3px #000000;">VISIT HUNGARY</span></a>
+            	</div>
+            </div>
+            <div class="w3-col m3">
+            	<div class="container w3-opacity w3-hover-opacity-off">
+                 <a href="http://www.studyinhungary.hu"><img src="p2.jpeg" style="width:100%;" class="w3-round w3-image"
+                    alt="Study in Hungary">
+                 <span class="centered w3-large" style="text-shadow:0 0 3px #000000;">STUDY IN HUNGARY</span></a>
+            	</div>
+            </div>
+            <div class="w3-col m3">
+            	<div class="container w3-opacity w3-hover-opacity-off">
+                 <a href="https://washington.mfa.gov.hu/eng"><img src="p3.jpeg" style="width:100%;" class="w3-round w3-image"
+                    alt="Embassy in DC">
+                 <span class="centered w3-large" style="text-shadow:0 0 3px #000000;">HUNGARIAN EMBASSY</span></a>
+            	</div>
+            </div>
+            <div class="w3-col m3">
+            	<div class="container w3-opacity w3-hover-opacity-off">
+                 <a href="https://www.facebook.com/HawaiiMagyarok"><img src="p4.png" style="width:100%;" class="w3-round w3-image"
+                    alt="Hungartians in Hawaii">
+                 <span class="centered w3-large" style="text-shadow:0 0 3px #000000;">HUNGARIANS IN HAWAII</span></a>
+            	</div>
+            </div>
+
+        </div>
+
+<!-- 
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="p5.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="p6.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="My beloved typewriter">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="p7.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Empty ghost train">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="p8.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+            </div>
+            <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+        </div>
+ -->
+        <div class="w3-padding-top-32">
+        <h3 class="w3-center">LEARN MORE ABOUT HUNGARY</h3>
+        <p class="w3-center"><em>For a brief overview of Hungarian history, economy and culture look at <a href="https://en.wikipedia.org/wiki/Hungary">Wikipedia</a>.<br> 
+        For greater detail look at <a href="https://www.britannica.com/place/Hungary/History">Britannica</a>.</em></p><br>
+        </div>
+
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+    
+    <!-- Third Parallax Image with Portfolio Text -->
+<!-- 
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+ -->
+    <div class="bgimg-3 w3-display-container" id="contact">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide" style="text-shadow:0 0 3px #000000;">CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">GET IN TOUCH</h3>
+        <p class="w3-center"><em>Looking forward to talking with you!</em></p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container w3-opacity w3-hover-opacity-off">
+             	<div class="container">
+               <a href="https://www.google.com/maps/place/1517+St+Louis+Dr,+Honolulu,+HI+96816,+USA/@21.295618,-157.8095107">
+                <img src="map.jpeg" class="w3-image w3-round" style="width:100%;" alt="Map">
+                <span class="centered w3-large" style="text-shadow:0 0 3px #000000;">MAP</span>
+                </a>
+            	</div>
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 1517 Saint Louis Drive<br>
+                    <i class="fa fa-fw w3-hover-text-black w3-xlarge w3-margin-right"> </i> Honolulu, HI 96816, USA<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+                </div>
+<!-- 
+                <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave a note:</p>
+                <p>Leave a note:</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+ -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<!-- 
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+ -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+<!-- 
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+ -->
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-grey">w3.css</a> and <a href="https://unsplash.com" title="Unsplash" target="_blank"
+                class="w3-hover-text-grey">Unsplash</a></p>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+]]>
+</Content>
+</Module>
