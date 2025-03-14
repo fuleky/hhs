@@ -1,4 +1,4 @@
-# h3consul
-Honorary Consul of Hungary in Hawaii
+# hhs
+Hawaii Hungarian School
 
-Web: https://fuleky.github.io/h3consul/index.html
+Web: https://fuleky.github.io/hhs/index.html
